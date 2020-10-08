@@ -1,8 +1,8 @@
-import move from './move';
+import move, { List } from './move';
 
 describe('move', () => {
   it('moves given file to another folder', () => {
-    const list = [
+    const list: List = [
       {
         id: '1',
         name: 'Folder 1',
@@ -44,7 +44,7 @@ describe('move', () => {
   });
 
   it('throws error if given source is not a file', () => {
-    const list = [
+    const list: List = [
       {
         id: '1',
         name: 'Folder 1',
@@ -57,7 +57,7 @@ describe('move', () => {
   });
 
   it('throws error if given destination is not a folder', () => {
-    const list = [
+    const list: List = [
       {
         id: '1',
         name: 'Folder 1',
@@ -67,5 +67,11 @@ describe('move', () => {
     ];
 
     expect(() => move(list, '2', '4')).toThrow('You cannot specify a file as the destination');
+  });
+
+  it('throws error if given structure is not a directory', () => {
+    const list: List = [];
+
+    expect(() => move(list, '2', '4')).toThrow('Directory not found!');
   });
 });
