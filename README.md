@@ -1,5 +1,7 @@
 # Atolye15 Question
 
+[![CircleCI](https://circleci.com/gh/cagcak/js-question-master.svg?style=svg&circle-token=c752273d713ab86779e2cf5305f5ed1877743893)](https://circleci.com/gh/cagcak/js-question-master)
+
 Please update `src/move.ts` to pass tests. You can find the tests in `src/move.spec.ts`.
 
 ## Acceptance criteria
